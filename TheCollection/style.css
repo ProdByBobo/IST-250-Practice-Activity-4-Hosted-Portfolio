@@ -1,0 +1,36 @@
+body {background-color: powderblue;}
+h1   {
+    color: #ffffff;
+    background-color: navy;
+}
+p    {color: #000000;}
+
+.lists-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+#home-list {
+    flex: 1;
+}
+#detail-list {
+    flex: 1;
+}
+
+img {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: auto;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-width: 10px;
+}
+
+h2{
+    text-transform: uppercase;
+}
+h4{
+    font-weight: normal;
+}
