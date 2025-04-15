@@ -1,0 +1,137 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+h4 {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px 40px;
+}
+
+/* Featured albums section */
+.featured-albums {
+    padding: 20px;
+    text-align: center;
+}
+
+.albums-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.album {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease, margin-top 0.3s ease;
+}
+.album img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.album-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.album:hover .album-info {
+    opacity: 1; 
+    transform: translateY(0);
+}
+.album:hover {
+    transform: scale(1.2);
+    margin-top: 20px;
+}
+
+/* Inventory table */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+.float-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    padding: 20px;
+}
+
+.float-section img {
+    width: 70%; 
+    height: auto;
+    margin-bottom: 20px; 
+}
+tr:nth-child(even) {
+    background-color: #d7d7d7;
+  }
