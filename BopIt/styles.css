@@ -1,0 +1,106 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 150px;
+    padding: 0;
+  }
+  
+  /* Container with grid layout */
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "sidebar content1 content1"
+      "sidebar content2 content3"
+      "footer footer footer";
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 70px auto auto 50px;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Grid items */
+  .header {
+    grid-area: header;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    text-align: center;
+    line-height: 70px;
+    animation: slideDown 2s ease-out forwards; /* The animation */
+    font-size: 50px;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(to bottom, #11998e, #38ef7d);
+    padding: 20px;
+
+  }
+  .sidebar:hover{
+    /* First filter effect */
+    filter: grayscale(100%);
+  }
+  .content1 {
+    grid-area: content1;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    padding: 20px;
+    transition: transform 0.3s;
+    /* First transform effect on hover */
+  }
+  .content1:hover {
+    transform: scale(1.05) rotate(180deg);
+  }
+  
+  .content2 {
+    grid-area: content2;
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    padding: 20px;
+    transition: transform 0.3s;
+    /* Second transform effect on hover */
+  }
+  .content2:hover {
+    transform: translateX(10px);
+  }
+  
+  .content3 {
+    grid-area: content3;
+    background: linear-gradient(to right, #4568dc, #b06ab3);
+    padding: 20px;
+    transition: filter 0.3s;
+    /* Second filter effect on hover */
+  }
+  .content3:hover {
+    filter: blur(3px);
+  }
+  
+  .footer {
+    grid-area: footer;
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    text-align: center;
+    line-height: 50px;
+    font-size: 90px;
+  }
+    .footer:hover {
+        /* Third filter effect */
+        filter: brightness(0.8);
+        transform: scale(2);
+    }
+  
+  /* Keyframes for header animation */
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
